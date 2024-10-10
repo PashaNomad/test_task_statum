@@ -1,0 +1,7 @@
+openmeteo-requests
+requests-cache
+retry-requests
+python-dateutil
+pandas
+SQLAlchemy
+psycopg2-binary

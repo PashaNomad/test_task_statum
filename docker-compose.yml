@@ -1,0 +1,19 @@
+
+    services:
+      postgres:
+        image: postgres:16
+        restart: always
+        shm_size: 1024mb
+        container_name: "postgres_weather"
+        environment:
+          POSTGRES_USER: "user"
+          POSTGRES_PASSWORD: "pass"
+          POSTGRES_DB: "postgres"
+        ports:
+          - "5433:5432"
+        volumes:
+          - pg_data:/var/lib/postgresql/data
+
+    volumes:
+      pg_data:
+    
