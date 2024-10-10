@@ -27,8 +27,8 @@ def install_requirements(venv_python):
     :param venv_python: Путь к интерпретатору Python в виртуальном окружении.
     """
     print("Установка зависимостей из 'requirements.txt'...")
-    subprocess.run([venv_python, "-m", "pip", "install", "--upgrade", "pip"], check=True)
-    subprocess.run([venv_python, "-m", "pip", "install", "-r", "requirements.txt"], check=True)
+    subprocess.run([venv_python, "-m", "pip", "install", "--upgrade", "pip"], stdout=subprocess.DEVNULL, check=True)
+    subprocess.run([venv_python, "-m", "pip", "install", "-r", "requirements.txt"], stdout=subprocess.DEVNULL, check=True)
     print("Все зависимости успешно установлены.")
 
 if __name__ == "__main__":
